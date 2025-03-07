@@ -12,9 +12,11 @@
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
+# define OPEN_MAX 100
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdio.h>
+# include <fcntl.h>
 # include <unistd.h>
 # include <limits.h>
 
