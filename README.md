@@ -154,6 +154,7 @@ fixing a "bug" inside the ray-casting algorithm:
 
 cub3d/srcs/casting_ray.c
 game->ray.side_dist.x = (game->player.pos.x - game->ray.map_x + 0.00001) // line 38
+
 game->ray.side_dist.y = (game->player.pos.y - game->ray.map_y + 0.00001) // line 50
 
 
