@@ -131,7 +131,7 @@ I handled our prompt with history (readline has leaks) and the expander, whereas
 [alpelliz](https://github.com/Beta-J23) did most of the builtins.
 Additionally, our minishell compiles with the flag -fsanitize=address. This
 checks for leaks, heap buffer overflows and other errors related to memory.
-Some resources for this project can be found in <FOLDERNAME>. Well made guide at:
+Some resources for this project can be found in the project folder. Well made guide at:
 https://github.com/startaglia/minishell?tab=readme-ov-file
 
 <h3 align="center">cub3d</h3>
