@@ -135,8 +135,7 @@ To run this project you first need to install readline. For Fedora Linux:
 
 $sudo apt-get install libreadline-dev
 
-Some resources for this project can be found in the project folder. Well made guide at:
-https://github.com/startaglia/minishell?tab=readme-ov-file
+Well made guide at: https://github.com/startaglia/minishell?tab=readme-ov-file
 
 <h3 align="center">cub3d</h3>
 
