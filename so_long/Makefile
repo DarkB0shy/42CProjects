@@ -28,22 +28,25 @@ PRINTF = ft_printf/
 
 GET_NEXT_LINE = ft_get_next_line/libftget_next_line.a
 
-LIBX = minilibx_opengl_20191021/libmlx.a
+LIBX = minilibx_opengl_20191021/
 
 INCLUDE = -I include
 
 ${NAME}: ${OBJS}
 	make -C $(PRINTF)
+	make -C $(LIBX)
 	${CC} ${FLAGS} ${LINKAR} ${INCLUDE} ${OBJS} ${PRINTF} ${GET_NEXT_LINE} ${LIBX} -o ${NAME}
 
 all: ${NAME}
 
 clean:
 	make clean -C $(PRINTF)
+	make clean -C $(LIBX)
 	${RM} ${OBJS}
 
 fclean: clean
 	make fclean -C $(PRINTF)
+	make fclean -C $(LIBX)
 	rm -f $(GET_NEXT_LINE)
 	rm -f $(NAME)
 
