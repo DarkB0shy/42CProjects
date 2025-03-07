@@ -131,7 +131,7 @@ I handled our prompt with history (readline has leaks) and the expander, whereas
 [alpelliz](https://github.com/Beta-J23) did most of the builtins.
 Additionally, our minishell compiles with the flag -fsanitize=address. This
 checks for leaks, heap buffer overflows and other errors related to memory.
-To run this project you first need to install readline. For Fedora Linux:
+To run this project you first need to install readline. For Ubuntu Linux:
 
 $sudo apt-get install libreadline-dev
 
@@ -167,6 +167,10 @@ algorithm wasn't working whenever a player spawned at the corner of map:
 				1001010001
 				1001001001
 				1111111111
+
+In order to run a MiniLibX program on Ubuntu you need to download these packages:
+
+$sudo apt install -y zlib1g-dev libxext-dev libx11-dev libbsd-dev libxrandr-dev libxinerama-dev libxcursor-dev
 
 Very good guides can be found at: https://github.com/mlongo03/Cube3D
 and https://lodev.org/cgtutor/raycasting.html
