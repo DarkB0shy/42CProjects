@@ -131,6 +131,10 @@ I handled our prompt with history (readline has leaks) and the expander, whereas
 [alpelliz](https://github.com/Beta-J23) did most of the builtins.
 Additionally, our minishell compiles with the flag -fsanitize=address. This
 checks for leaks, heap buffer overflows and other errors related to memory.
+To run this project you first need to install readline. For Fedora Linux:
+
+$sudo apt-get install libreadline-dev
+
 Some resources for this project can be found in the project folder. Well made guide at:
 https://github.com/startaglia/minishell?tab=readme-ov-file
 
