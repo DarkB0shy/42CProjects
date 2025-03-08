@@ -104,18 +104,21 @@ This C project is about creating a multi-thread application that takes advantage
 of mutexes to avoid race conditions. Every thread is a dining philosopher and all
 they do is eat, sleep, think and of course die, and every action followed by the
 ID is printed on the standard output. These parameters are passed to the program
-at runtime.
+at runtime. To test this program you can run it with: 5 800 200 200 7. Every
+philo will eat 7 times and all of them will live.
 
 When dealing with multi-threading, several threads may try to access or modify
 a variable value at the same time resulting in undefined behaviour (that variable
 might be used in different parts of the program with different values). This is
 when mutexes come in handy for they "lock" a function or a portion of the program 
 to other threads.
-There are as many forks as philosophers and each one of them must be "protected"
-by a mutex. If pthread_mutex_lock(&pthread_mutex_t) returns a non-zero value,
-that mutex will be "locked" or non accessible to other threads until a call to
+Every thread needs two forks to "eat" from the table and there are as many forks
+as philosophers, also each one of them must be "protected" by a mutex.
+If pthread_mutex_lock(&pthread_mutex_t) returns a non-zero value, that mutex will
+be "locked" or non accessible to other threads until a call to
 pthread_mutex_unlock(&pthread_mutex_t) will be made by the thread that first
-locked the mutex.
+locked the mutex. This means every line of code within those two functions won't
+get executed by (at least) another one of the active processes.
 An extremely detailed guide can be found at:
 https://github.com/TommyJD93/Philosophers
 
@@ -123,7 +126,7 @@ https://github.com/TommyJD93/Philosophers
 
 <p align="right">Final score: 100</p>
 
-minishell is a C recoding of a simpler version of Bash and it focuses mostly on
+minishell is a C recoding of a simpler version of a Bash shell and it focuses mostly on
 file descriptors and processes. Every functionality is described in the subject,
 generally speaking it is divided into a parser, an expander and an executor.
 [scastagn](https://github.com/IamG-Root) implemented most of our final executor, [startagl](https://github.com/startaglia) handled the parser,
@@ -168,7 +171,7 @@ algorithm wasn't working whenever a player spawned at the corner of map:
 				1001001001
 				1111111111
 
-In order to run a MiniLibX program on Ubuntu you need to download these packages:
+To run this program on Ubuntu you might need to download these packages:
 
 $sudo apt install -y zlib1g-dev libxext-dev libx11-dev libbsd-dev libxrandr-dev libxinerama-dev libxcursor-dev
 
