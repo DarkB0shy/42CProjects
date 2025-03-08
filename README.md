@@ -107,18 +107,18 @@ ID is printed on the standard output. These parameters are passed to the program
 at runtime. To test this program you can run it with: 5 800 200 200 7. Every
 philo will eat 7 times and all of them will live.
 
-When dealing with multi-threading, several threads may try to access or modify
-a variable value at the same time resulting in undefined behaviour (that variable
-might be used in different parts of the program with different values). This is
-when mutexes come in handy for they "lock" a function or a portion of the program 
-to other threads.
+Race conditions occur when dealing with multi-threading: several processes may try
+to access or modify a variable value at the same time, resulting in undefined
+behaviour (that variable might be used from different parts of the program with
+different values). This is when mutexes come in handy for they "lock" a
+function or a portion of the program to other threads.
 Every thread needs two forks to "eat" from the table and there are as many forks
-as philosophers, also each one of them must be "protected" by a mutex.
+as philosophers; each fork should be protected by a mutex.
 If pthread_mutex_lock(&pthread_mutex_t) returns a non-zero value, that mutex will
 be "locked" or non accessible to other threads until a call to
 pthread_mutex_unlock(&pthread_mutex_t) will be made by the thread that first
 locked the mutex. This means every line of code within those two functions won't
-get executed by (at least) another one of the active processes.
+get executed by any other active process.
 An extremely detailed guide can be found at:
 https://github.com/TommyJD93/Philosophers
 
